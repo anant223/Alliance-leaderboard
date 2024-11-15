@@ -63,12 +63,12 @@ export default function AlliancePage() {
           transition={{ duration: 0.5 }}
           className="bg-[#1a1a1a] rounded-lg p-4 md:p-6 mb-8 shadow-lg"
         >
-          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#f5c518]">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#f5c518] justify-center flex">
             Share Your Skills and Needs
           </h2>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center"
+            className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center justify-center"
           >
             <div className="w-full md:w-1/4">
               <label
