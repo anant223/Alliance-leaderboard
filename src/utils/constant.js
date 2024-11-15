@@ -4,7 +4,7 @@ const initialUsers = [
     name: "Alice Cooper",
     offers: "Web Design",
     needs: "Marketing",
-    image:"https://i.pravatar.cc/100?img=3",
+    image: "https://i.pravatar.cc/100?img=3",
     rating: 4.5,
   },
   {
@@ -12,12 +12,12 @@ const initialUsers = [
     name: "Bob Dylan",
     offers: "Marketing",
     needs: "Coding",
-    image:"https://i.pravatar.cc/100?img=2",
+    image:"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     rating: 4.2,
   },
   {
     id: 3,
-     name: "Amy",
+    name: "Amy",
     offers: "Coding",
     needs: "Web Design",
     image: "https://i.pravatar.cc/100?img=1",
@@ -39,7 +39,7 @@ const initialUsers = [
     image: "https://i.pravatar.cc/100?img=5",
     rating: 4.8,
   },
-   {
+  {
     id: 6,
     name: "Ivy",
     offers: "Coding",
@@ -47,7 +47,7 @@ const initialUsers = [
     image: "https://i.pravatar.cc/100?img=9",
     rating: 4.8,
   },
-   {
+  {
     id: 7,
     name: "Grace",
     offers: "Coding",
