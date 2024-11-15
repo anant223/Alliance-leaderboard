@@ -17,7 +17,7 @@ const initialUsers = [
   },
   {
     id: 3,
-     name: "Frank",
+     name: "Amy",
     offers: "Coding",
     needs: "Web Design",
     image: "https://i.pravatar.cc/100?img=1",
@@ -52,7 +52,7 @@ const initialUsers = [
     name: "Grace",
     offers: "Coding",
     needs: "Web Design",
-    image: "https://i.pravatar.cc/100?img=7",
+    image: "https://i.pravatar.cc/100?img=12",
     rating: 4.8,
   },
 ];

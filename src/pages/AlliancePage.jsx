@@ -50,22 +50,27 @@ export default function AlliancePage() {
     <div className="min-h-screen bg-[#121212] text-white">
       <header className="bg-[#121212] border-b border-[#252525] py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-[#f5c518]">Your Alliance</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#f5c518]">
+            Your Alliance
+          </h1>
         </div>
       </header>
 
-      <main className="container mx-auto px-36 py-8">
+      <main className="container mx-auto px-4 md:px-8 lg:px-16 py-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#1a1a1a] rounded-lg p-6 mb-8 shadow-lg"
+          className="bg-[#1a1a1a] rounded-lg p-4 md:p-6 mb-8 shadow-lg"
         >
-          <h2 className="text-2xl font-semibold mb-4 text-[#f5c518]">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#f5c518]">
             Share Your Skills and Needs
           </h2>
-          <form onSubmit={handleSubmit} className="space-x-4 flex items-center">
-            <div>
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center"
+          >
+            <div className="w-full md:w-1/4">
               <label
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-300"
@@ -81,7 +86,7 @@ export default function AlliancePage() {
                 required
               />
             </div>
-            <div>
+            <div className="w-full md:w-1/4">
               <label
                 htmlFor="offer"
                 className="block text-sm font-medium text-gray-300"
@@ -93,11 +98,10 @@ export default function AlliancePage() {
                 value={offer}
                 onChange={(e) => setOffer(e.target.value)}
                 className="mt-1 block w-full rounded-md bg-[#2c2c2c] border-[#3a3a3a] text-white shadow-sm focus:border-[#f5c518] focus:ring focus:ring-[#f5c518] focus:ring-opacity-50 py-2 px-4"
-                rows={3}
                 required
               />
             </div>
-            <div>
+            <div className="w-full md:w-1/4">
               <label
                 htmlFor="need"
                 className="block text-sm font-medium text-gray-300"
@@ -109,20 +113,18 @@ export default function AlliancePage() {
                 value={need}
                 onChange={(e) => setNeed(e.target.value)}
                 className="mt-1 block w-full rounded-md bg-[#2c2c2c] border-[#3a3a3a] text-white shadow-sm focus:border-[#f5c518] focus:ring focus:ring-[#f5c518] focus:ring-opacity-50 py-2 px-4"
-                rows={3}
                 required
               />
             </div>
-            <div>
-              <label
-                htmlFor="offer"
-                className="block text-sm font-medium text-black"
-              >x</label>
+            <div className="w-full md:w-auto">
+              <label className="block text-sm font-medium text-transparent">
+                x
+              </label>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className=" bg-[#f5c518] text-black font-bold py-2 px-4 rounded hover:bg-[#ffd700] transition-colors duration-300"
+                className="w-full md:w-auto bg-[#f5c518] text-black font-bold py-2 px-4 rounded hover:bg-[#ffd700] transition-colors duration-300"
               >
                 Submit
               </motion.button>
@@ -135,11 +137,11 @@ export default function AlliancePage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-2xl font-semibold mb-4 text-[#f5c518]">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#f5c518]">
             Your Matches
           </h2>
           {matches.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {matches.map(({ user, score }, index) => (
                 <MatchCard
                   key={user.id}

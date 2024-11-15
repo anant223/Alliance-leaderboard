@@ -10,9 +10,9 @@ const MatchCard = ({ user, score, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full sm:w-[280px] md:w-[300px] h-full flex flex-col"
     >
-      <div className="p-4">
+      <div className="p-4 flex-grow">
         <div className="flex items-center space-x-4 mb-4">
           <Image
             src={user.image}
@@ -38,15 +38,15 @@ const MatchCard = ({ user, score, index }) => {
         <p className="text-gray-300">
           <strong className="text-white">Needs:</strong> {user.needs}
         </p>
-        <div className="mt-4 flex items-center justify-between">
-          <p className="text-sm text-gray-400 italic">
-            {generateTopic(user.offers, user.needs)}
-          </p>
-          <button className="bg-[#f5c518] text-black px-3 py-1 rounded-full flex items-center text-sm font-bold hover:bg-[#ffd700] transition-colors duration-300">
-            <MessageCircle className="w-4 h-4 mr-1" />
-            Connect
-          </button>
-        </div>
+      </div>
+      <div className="mt-4 flex items-center justify-between p-4">
+        <p className="text-sm text-gray-400 italic">
+          {generateTopic(user.offers, user.needs)}
+        </p>
+        <button className="bg-[#f5c518] text-black px-3 py-1 rounded-full flex items-center text-sm font-bold hover:bg-[#ffd700] transition-colors duration-300">
+          <MessageCircle className="w-4 h-4 mr-1" />
+          Connect
+        </button>
       </div>
     </motion.div>
   );
